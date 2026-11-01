@@ -5,7 +5,7 @@ const API_LOOKUP = `https://www.cheapshark.com/api/1.0/games?id=`;
 const API_STORES = `https://www.cheapshark.com/api/1.0/stores`;
 let storesFromApi = [];
 
-console.log(API_STORES);
+// console.log(API_STORES);
 
 // SEARCH RESULT ITEMS
 const searchListContainer = document.querySelector(".search-result-container");
@@ -84,7 +84,7 @@ function updateSearchedItem(gameItem) {
     thumb: thumbnail,
     gameID: id,
   } = gameItem;
-  console.log(gameItem);
+  // console.log(gameItem);
   const gameItemHtml = `
   <div class="search-item">
           <div class="game-info-container">
@@ -117,7 +117,7 @@ async function getGameLookup(gameID) {
 async function handleGameClick(event) {
   const gameID = await event;
   const game = await getGameLookup(gameID);
-  console.log(game);
+  // console.log(game);
   renderDealsPage(game);
   showDealsView();
 }
@@ -187,7 +187,7 @@ function renderDeal(deal) {
                             <h3 class="saving-value ${savingClass}">-${savingRound}%</h4>
             </div>
           </div>
-          <button class="go-to btn-violet">Go to Store</button>
+          <button class="go-to btn-violet" data-storeid="${storeId}">Go to Store</button>
       </div>
       `;
 
@@ -205,6 +205,159 @@ async function getStoresInfo() {
 async function list() {
   storesFromApi = await getStoresInfo();
 }
+
+const checkStoreId = (storeId) => {
+  switch (storeId) {
+    case "1":
+      console.log("Steam");
+      window.open("https://store.steampowered.com/");
+      break;
+    case "2":
+      console.log("GamersGate");
+      window.open("https://www.gamersgate.com/");
+      break;
+    case "3":
+      console.log("GreenManGaming");
+      window.open("https://www.greenmangaming.com/");
+      break;
+    case "4":
+      console.log("Amazon");
+      window.open("https://www.amazon.com/");
+      break;
+    case "5":
+      console.log("GameStop");
+      window.open("https://www.gamestop.com/");
+      break;
+    case "6":
+      console.log("Direct2Drive");
+      window.open("https://m.direct2drive.com/");
+      break;
+    case "7":
+      console.log("GOG");
+      window.open("https://www.gog.com/en/");
+      break;
+    case "8":
+      console.log("Origin");
+      window.open("https://www.ea.com/en-gb/ea-app?setLocale=en-gb");
+      break;
+    case "9":
+      console.log("Get Games");
+      window.open("https://getgames.app/");
+      break;
+    case "10":
+      console.log("Shiny Loot");
+      window.open("");
+      break;
+    case "11":
+      console.log("Humble Store");
+      window.open("https://www.humblebundle.com/store");
+      break;
+    case "12":
+      console.log("Desura");
+      window.open("https://www.desura.com/pl");
+      break;
+    case "13":
+      console.log("Uplay");
+      window.open("https://www.ubisoft.com/en-gb/ubisoft-connect");
+      break;
+    case "14":
+      console.log("IndieGameStand");
+      window.open("https://indiegamestand.com/");
+      break;
+    case "15":
+      console.log("Fanatical");
+      window.open("https://www.fanatical.com/en/");
+      break;
+    case "16":
+      console.log("Gamesrocket");
+      window.open(
+        "https://www.strictlylimitedgames.com/collections/partner-store",
+      );
+      break;
+    case "17":
+      console.log("Games Republic");
+      window.open("https://gamesrepublic.com/");
+      break;
+    case "18":
+      console.log("SilaGames");
+      window.open("https://silagames.com/");
+      break;
+    case "19":
+      console.log("Playfield");
+      window.open(
+        "https://www.roblox.com/pl/communities/11828622/Playfield-Games#!/about",
+      );
+      break;
+    case "20":
+      console.log("ImperialGames");
+      window.open("https://imperialgames.co.uk/");
+      break;
+    case "21":
+      console.log("WinGameStore");
+      window.open("https://www.wingamestore.com/");
+      break;
+    case "22":
+      console.log("FunStockDigital");
+      window.open(
+        "https://funstock.eu/?shpxid=a460950b-683c-4e78-9d3b-f93460755cd1",
+      );
+      break;
+    case "23":
+      console.log("GameBillet");
+      window.open("https://www.gamebillet.com/");
+      break;
+    case "24":
+      console.log("Voidu");
+      window.open("https://www.voidu.com/en/");
+      break;
+    case "25":
+      console.log("Epic Games Store");
+      window.open("https://store.epicgames.com/");
+      break;
+    case "26":
+      console.log("Razer Game Store");
+      window.open("https://gold.razer.com/eu/en");
+      break;
+    case "27":
+      console.log("Gamesplanet");
+      window.open("https://us.gamesplanet.com/");
+      break;
+    case "28":
+      console.log("Gamesload");
+      window.open("https://www.gamesload.com/");
+      break;
+    case "29":
+      console.log("2Game");
+      window.open("https://www.2game.com/");
+      break;
+    case "30":
+      console.log("IndieGala");
+      window.open("https://www.indiegala.com/");
+      break;
+    case "31":
+      console.log("Blizzard Shop");
+      window.open("https://eu.shop.battle.net/en-us#optLogin=true");
+      break;
+    case "32":
+      console.log("AllYouPlay");
+      window.open("https://allyouplay.com/");
+      break;
+    case "33":
+      console.log("DLGamer");
+      window.open("https://www.dlgamer.com/en");
+      break;
+    case "34":
+      console.log("Noctre");
+      window.open("https://www.noctre.com/");
+      break;
+    case "35":
+      console.log("DreamGame");
+      window.open("https://www.dreamgame.com/en/");
+      break;
+    default:
+      console.log("błąd");
+  }
+};
 
 // SHOW CONTAINERS
 
@@ -242,6 +395,9 @@ searchListContainer.addEventListener("click", (event) => {
 
 dealsWrapper.addEventListener("click", (event) => {
   if (event.target.matches(".go-to")) {
-    window.open("https://store.steampowered.com/");
+    // window.open("https://store.steampowered.com/");
+    console.log(event.target.dataset.storeid);
+    const storeId = event.target.dataset.storeid;
+    checkStoreId(storeId);
   }
 });
