@@ -1,0 +1,386 @@
+@import url("https://fonts.googleapis.com/css2?family=Geist+Pixel&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --main-color: #1a1b30;
+  --secondary-color: #2c2d4e;
+  --pink-color: #fc9ae5;
+  --violet-color: #6249e7;
+  --green-color: #66ff00;
+  --orange-color: #ff7300;
+  --red-color: #ff0000;
+  --white-color: #ffffff;
+  --white-color-transparent: rgb(255, 255, 255, 0.25);
+}
+
+body {
+  font-family: "Geist Pixel", sans-serif;
+  font-weight: 400;
+  background-color: var(--main-color);
+  color: var(--white-color);
+  line-height: 1.2;
+  /* background: #1a1b30;
+  background: linear-gradient(
+    350deg,
+    rgba(26, 27, 48, 1) 0%,
+    rgba(44, 45, 78, 1) 53%,
+    rgba(98, 73, 231, 1) 100%
+  ); */
+  width: 100%;
+  height: 100vh;
+}
+
+/* btns style */
+
+button {
+  height: 52px;
+  padding: 12px 24px;
+  border-radius: 16px;
+  border: none;
+  outline: none;
+  font-family: "Geist Pixel", sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--white-color);
+  background-color: var(--violet-color);
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: rgb(252, 154, 229, 0.5);
+}
+
+.btn-pink {
+  background-color: var(--pink-color);
+  transition: background-color 0.5s ease;
+}
+
+.btn-pink:hover {
+  background-color: var(--secondary-color);
+}
+
+.btn-violet {
+  background-color: var(--violet-color);
+  transition: background-color 0.5s ease;
+}
+
+.btn-violet:hover {
+  background-color: var(--main-color);
+}
+
+/* PRICE COLORS */
+
+.price-discount,
+.saving-discount {
+  color: var(--green-color);
+}
+.price-standard {
+  color: var(--white-color);
+}
+
+.saving-zero {
+  color: var(--violet-color);
+}
+
+/* HEADER STYLES */
+
+h1 {
+  font-size: 40px;
+  font-weight: 300;
+}
+
+h2 {
+  font-size: 40px;
+  font-weight: 600;
+}
+
+h3 {
+  font-size: 32px;
+  font-weight: 600;
+}
+h4 {
+  font-weight: 400;
+}
+
+h5 {
+  font-size: 14px;
+  font-weight: 300;
+}
+
+/* INPUT STYLE */
+
+input {
+  height: 52px;
+  width: 560px;
+  border-radius: 16px;
+  border: 3px solid var(--white-color-transparent);
+  background-color: var(--secondary-color);
+  color: var(--white-color-transparent);
+  outline: none;
+  padding: 16px;
+  margin-right: 12px;
+}
+
+input:focus {
+  color: var(--white-color-transparent);
+  border: 3px solid var(--pink-color);
+}
+
+/* LINE STYLE */
+
+.line {
+  display: block;
+  width: 100%;
+  height: 1px;
+  background-color: var(--violet-color);
+}
+
+/* MAIN CONTAINER */
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 64px auto;
+  /* max-width: 1200px; */
+  margin: 0 10%;
+}
+
+.header-container {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  /* gap: 24px; */
+  margin-top: 40px;
+}
+
+/* SEARCH RESULT */
+
+.search-result-container {
+  display: none;
+  /* display: flex; */
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+  width: 100%;
+  margin-top: 40px;
+}
+
+.search-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* width: 800px; */
+  width: 100%;
+  /* gap: 24px; */
+  padding: 24px;
+
+  transition: background-color 0.5s ease;
+}
+
+.search-item:nth-child(even) {
+  background-color: var(--secondary-color);
+}
+
+.game-info-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* width: 100%; */
+  gap: 40px;
+}
+
+.game-cover-thumb {
+  /* margin-right: 80px; */
+  width: 250px;
+  max-height: 100px;
+}
+
+.search-price {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+}
+.search-price-value {
+  color: var(--green-color);
+}
+.search-list-btn,
+.go-to {
+  /* margin-left: 80px; */
+  padding: 8px;
+  height: 32px;
+  width: 120px;
+  font-size: 12px;
+  border-radius: 8px;
+}
+
+.search-list-btn {
+  margin-left: 24px;
+}
+
+.welcome-screen-container {
+  margin-top: 100px;
+}
+
+.welcome-screen-container h1 {
+  font-size: 60px;
+}
+
+/* LIST OF DEALS */
+
+.deals-container {
+  display: none;
+  /* display: flex; */
+  flex-direction: column;
+  gap: 32px;
+  justify-content: center;
+  align-items: flex-start;
+  margin-top: 80px;
+  width: 100%;
+}
+
+.deals-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  gap: 24px;
+  width: 100%;
+  margin-bottom: 24px;
+  background-color: var(--secondary-color);
+  padding: 24px;
+}
+
+.deal-cheapest-ever {
+  margin-top: 6px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  text-align: right;
+  gap: 4px;
+}
+
+.deals-list-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.deals-list-heading {
+  margin-bottom: 24px;
+  font-weight: 200;
+  font-size: 24px;
+}
+.deals-wrapper {
+  width: 100%;
+}
+
+.deal-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 32px 48px;
+  width: 100%;
+  transition: background-color 0.1s ease;
+}
+
+.deal-item:hover {
+  background-color: var(--secondary-color);
+}
+.store {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  font-size: 14px;
+  width: 140px;
+  padding: 4px;
+}
+
+.store-logo {
+  max-width: 80px;
+  margin-bottom: 8px;
+}
+
+.prices {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
+}
+
+.deals-price-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.deals-price-info:first-child {
+  color: var(--pink-color);
+}
+
+.deals-price-info h5 {
+  margin-top: 6px;
+  color: var(--violet-color);
+}
+
+.list-deals-price {
+  font-size: 24px;
+  font-weight: 800;
+}
+
+.main-info-container {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  width: 100%;
+}
+
+.game-title {
+  font-size: 32px;
+}
+
+.detail-info-cointainer,
+.price-container {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.detail-item,
+.price-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  /* gap: 8px; */
+}
+
+.detail-name {
+  font-weight: 300;
+}
+
+.detail-value,
+.price-value {
+  color: var(--green-color);
+}
+
+.price-item:first-child .price-value {
+  color: var(--white-color);
+}
+.price-item:last-child .price-value {
+  font-size: 32px;
+  font-weight: bold;
+}
